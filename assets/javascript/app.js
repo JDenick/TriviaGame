@@ -3,6 +3,10 @@ $('#start').on("click",function(){
     game.start();
 })
 
+$(document).on('click','#end',function(){
+    game.done();
+})
+
 var questions = [{
     question: "When was the first NHL game?",
     answers:["1917", "1901", "1936", "1906"],
@@ -28,7 +32,7 @@ var game = {
 
     start: function(){
         timer = setInterval(game.countdown, 1000);
-        $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter">10</span> Seconds</h2>');
+        $('#clockwork').prepend('<h2>Time Remaining: <span id="counter">10</span> Seconds</h2>');
         $('#start').remove();
         for(var i=0; i<questions.length; i++){
             $('#subwrapper').append('<h2>'+questions[i].question+'</h2>');
@@ -36,18 +40,20 @@ var game = {
                 $("#subwrapper").append("<input type='radio' name='question-"+i+"' value='"+questions[i].answers[j]+"'>"+questions[i].answers[j]);
             }
         }
+        $('#subwrapper').append("<br><br><button id='end' type='button' class='btn btn-primary'>Done!</button>");
     },
 
     done: function(){
-        $.each($("input[name='question-0'];checked"),function(){
-            if($(this).val() == questions[0].correctAnswer){
+        $.each($('input[name="question-0]":checked'),function(){
+            if($(this).val()==questions[0].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-1]";checked]'),function(){
-            if($(this).val() == questions[1].correctAnswer){
+
+        $.each($('input[name="question-1]":checked]'),function(){
+            if($(this).val()==questions[1].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
