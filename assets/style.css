@@ -1,5 +1,6 @@
 body {
-    background-image: url("images/istockphoto-620737142-612x612.jpg");
+    /* background-image: url("images/istockphoto-620737142-612x612.jpg"); */
+    background-image: url(images/istockphoto-2.jpg);
     background-size: cover;
     opacity: 30px;
 }
