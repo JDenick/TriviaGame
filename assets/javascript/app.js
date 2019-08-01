@@ -15,7 +15,44 @@ var questions = [{
     question: "Which team was not an original six team?",
     answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
     correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which of these teams never won a Stanley Cup?",
+    answers:["Kenora Thistles", "Windsor Bulldogs", "Seattle Metropolitians", "Toronto Blueshirts"],
+    correctAnswer: "Windsor Bulldogs"
+}, {
+    question: "The Montreal Canadians won how many cups in the '90's?",
+    answers:["0", "1", "2", "3"],
+    correctAnswer: "1"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which team was not an original six team?",
+    answers:["Montreal Canadians", "Edmonton Oilers", "New York Rangers", "Chicago Blackhawks"],
+    correctAnswer: "Edmonton Oilers"
+}, {
+    question: "Which player was the first in NHL to score a full-strength, power play, short-handed, penalty shot, and open net goal in the same game?",
+    answers:["Brett Hull", "Bobby Orr", "Mario Lemieux", "Wayne Gretzky"],
+    correctAnswer: "Mario Lemieux"
 }];
+
 
 var game = {
     correct: 0,
@@ -44,7 +81,7 @@ var game = {
     },
 
     done: function(){
-        $.each($('input[name="question-0]":checked'),function(){
+        $.each($('input[name="question-0"]:checked'),function(){
             if($(this).val()==questions[0].correctAnswer){
                 game.correct++;
             } else {
@@ -52,7 +89,7 @@ var game = {
             }
         });
 
-        $.each($('input[name="question-1]":checked]'),function(){
+        $.each($('input[name="question-1"]:checked'),function(){
             if($(this).val()==questions[1].correctAnswer){
                 game.correct++;
             } else {
