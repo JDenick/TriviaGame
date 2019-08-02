@@ -1,4 +1,3 @@
-alert("Reset")
 $('#start').on("click",function(){
     game.start();
 })
